@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>StudentHub | Career Planner</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <span>
+                StudentHub
+            </span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html"
+               class="nav-item">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </a>
+
+
+            <a href="tasks.html"
+               class="nav-item">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                My Tasks
+
+            </a>
+
+
+            <a href="career.html"
+               class="nav-item active">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                Career Planner
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-tip">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            <div>
+
+                <strong>
+                    Career Tip
+                </strong>
+
+                <p>
+                    Build projects that demonstrate
+                    your skills.
+                </p>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+
+        <header class="topbar">
+
+            <div class="mobile-title">
+                StudentHub
+            </div>
+
+
+            <div class="profile">
+
+                <div class="notification">
+
+                    <i class="fa-regular fa-bell">
+                    </i>
+
+                    <span></span>
+
+                </div>
+
+
+                <div class="avatar">
+                    S
+                </div>
+
+
+                <div class="profile-info">
+
+                    <strong>
+                        Sakshi
+                    </strong>
+
+                    <small>
+                        B.Tech CSE
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="content">
+
+
+            <!-- HEADER -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        CAREER DEVELOPMENT
+                    </span>
+
+                    <h1>
+                        Career Planner
+                    </h1>
+
+                    <p>
+                        Build skills and prepare
+                        yourself for your dream career.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAREER OVERVIEW -->
+
+            <div class="career-overview">
+
+                <div class="career-summary">
+
+                    <div class="summary-icon">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Overall Career Readiness
+                        </span>
+
+                        <h2>
+                            68%
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="career-message">
+
+                    <strong>
+                        You're making good progress! 🚀
+                    </strong>
+
+                    <p>
+                        Focus on DSA and interview
+                        preparation next.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAREER CARDS -->
+
+            <div class="career-grid">
+
+
+                <!-- DSA -->
+
+                <div class="career-card">
+
+                    <div class="career-card-top">
+
+                        <div class="career-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+
+                        <span>
+                            68%
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        DSA Preparation
+                    </h3>
+
+                    <p>
+                        Improve problem-solving skills
+                        through coding practice.
+                    </p>
+
+                    <div class="progress-bar">
+
+                        <div style="width:68%">
+                        </div>
+
+                    </div>
+
+                    <div class="progress-text">
+
+                        <span>
+                            68% Complete
+                        </span>
+
+                        <span>
+                            34 / 50 Problems
+                        </span>
+
+                    </div>
+
+                    <button class="outline-btn"
+                            onclick="careerMessage('DSA')">
+
+                        Continue Learning →
+
+                    </button>
+
+                </div>
+
+
+                <!-- RESUME -->
+
+                <div class="career-card">
+
+                    <div class="career-card-top">
+
+                        <div class="career-icon">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+
+                        <span>
+                            85%
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Resume Building
+                    </h3>
+
+                    <p>
+                        Keep your resume ready for
+                        internship and job opportunities.
+                    </p>
+
+                    <div class="progress-bar">
+
+                        <div style="width:85%">
+                        </div>
+
+                    </div>
+
+                    <div class="progress-text">
+
+                        <span>
+                            85% Complete
+                        </span>
+
+                        <span>
+                            Almost Ready
+                        </span>
+
+                    </div>
+
+                    <button class="outline-btn"
+                            onclick="careerMessage('Resume')">
+
+                        Improve Resume →
+
+                    </button>
+
+                </div>
+
+
+                <!-- INTERVIEW -->
+
+                <div class="career-card">
+
+                    <div class="career-card-top">
+
+                        <div class="career-icon">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+
+                        <span>
+                            45%
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Interview Preparation
+                    </h3>
+
+                    <p>
+                        Practice technical and HR
+                        interview questions.
+                    </p>
+
+                    <div class="progress-bar">
+
+                        <div style="width:45%">
+                        </div>
+
+                    </div>
+
+                    <div class="progress-text">
+
+                        <span>
+                            45% Complete
+                        </span>
+
+                        <span>
+                            18 / 40 Sessions
+                        </span>
+
+                    </div>
+
+                    <button class="outline-btn"
+                            onclick="careerMessage('Interview')">
+
+                        Start Practice →
+
+                    </button>
+
+                </div>
+
+
+                <!-- PROJECTS -->
+
+                <div class="career-card">
+
+                    <div class="career-card-top">
+
+                        <div class="career-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+
+                        <span>
+                            72%
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Projects & Portfolio
+                    </h3>
+
+                    <p>
+                        Build real projects to showcase
+                        your technical skills.
+                    </p>
+
+                    <div class="progress-bar">
+
+                        <div style="width:72%">
+                        </div>
+
+                    </div>
+
+                    <div class="progress-text">
+
+                        <span>
+                            72% Complete
+                        </span>
+
+                        <span>
+                            4 Projects
+                        </span>
+
+                    </div>
+
+                    <button class="outline-btn"
+                            onclick="careerMessage('Projects')">
+
+                        View Projects →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAREER ROADMAP -->
+
+            <div class="card roadmap">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            YOUR ROADMAP
+                        </span>
+
+                        <h2>
+                            Career Preparation Journey
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="roadmap-line">
+
+
+                    <div class="roadmap-step completed">
+
+                        <div class="step-circle">
+                            ✓
+                        </div>
+
+                        <strong>
+                            Fundamentals
+                        </strong>
+
+                        <span>
+                            Completed
+                        </span>
+
+                    </div>
+
+
+                    <div class="roadmap-step completed">
+
+                        <div class="step-circle">
+                            ✓
+                        </div>
+
+                        <strong>
+                            Projects
+                        </strong>
+
+                        <span>
+                            Completed
+                        </span>
+
+                    </div>
+
+
+                    <div class="roadmap-step current">
+
+                        <div class="step-circle">
+                            3
+                        </div>
+
+                        <strong>
+                            Interview Prep
+                        </strong>
+
+                        <span>
+                            In Progress
+                        </span>
+
+                    </div>
+
+
+                    <div class="roadmap-step">
+
+                        <div class="step-circle">
+                            4
+                        </div>
+
+                        <strong>
+                            Placement
+                        </strong>
+
+                        <span>
+                            Upcoming
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<div id="toast"
+     class="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span>
+        Coming soon!
+    </span>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```

@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudentHub | Dashboard</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <span>StudentHub</span>
+        </div>
+
+        <nav>
+
+            <a href="index.html" class="nav-item active">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="tasks.html" class="nav-item">
+                <i class="fa-solid fa-list-check"></i>
+                My Tasks
+            </a>
+
+            <a href="career.html" class="nav-item">
+                <i class="fa-solid fa-briefcase"></i>
+                Career Planner
+            </a>
+
+        </nav>
+
+        <div class="sidebar-tip">
+            <i class="fa-solid fa-lightbulb"></i>
+
+            <div>
+                <strong>Study Tip</strong>
+                <p>
+                    Focus on one important task
+                    at a time.
+                </p>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div class="mobile-title">
+                StudentHub
+            </div>
+
+            <div class="profile">
+
+                <div class="notification">
+                    <i class="fa-regular fa-bell"></i>
+                    <span></span>
+                </div>
+
+                <div class="avatar">
+                    S
+                </div>
+
+                <div class="profile-info">
+                    <strong>Sakshi</strong>
+                    <small>B.Tech CSE</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD CONTENT -->
+        <section class="content">
+
+            <div class="welcome">
+
+                <div>
+
+                    <span id="currentDate"
+                          class="date-text">
+                    </span>
+
+                    <h1>
+                        Good Evening, Sakshi 👋
+                    </h1>
+
+                    <p>
+                        Let's make today productive
+                        and stay on track.
+                    </p>
+
+                </div>
+
+                <a href="tasks.html"
+                   class="primary-btn">
+
+                    <i class="fa-solid fa-plus"></i>
+                    Add Task
+
+                </a>
+
+            </div>
+
+
+            <!-- STATISTICS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+
+                    <div>
+                        <span>Total Tasks</span>
+                        <h2 id="totalTasks">6</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div>
+                        <span>Pending</span>
+                        <h2 id="pendingTasks">5</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <span>Completed</span>
+                        <h2 id="completedTasks">1</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+
+                    <div>
+                        <span>Study Streak</span>
+                        <h2>7 Days 🔥</h2>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DASHBOARD GRID -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- SMART FOCUS -->
+
+                <div class="card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                SMART FEATURE
+                            </span>
+
+                            <h2>
+                                Your Smart Focus
+                            </h2>
+
+                            <p>
+                                Your top 3 recommended
+                                tasks for today.
+                            </p>
+
+                        </div>
+
+                        <span class="ai-badge">
+                            AI
+                        </span>
+
+                    </div>
+
+
+                    <div class="focus-task">
+
+                        <div class="number">
+                            1
+                        </div>
+
+                        <div class="task-info">
+
+                            <strong>
+                                Complete DSA Assignment
+                            </strong>
+
+                            <span>
+                                90 min • Due Tomorrow
+                            </span>
+
+                        </div>
+
+                        <span class="priority high">
+                            HIGH
+                        </span>
+
+                    </div>
+
+
+                    <div class="focus-task">
+
+                        <div class="number">
+                            2
+                        </div>
+
+                        <div class="task-info">
+
+                            <strong>
+                                Prepare DBMS Notes
+                            </strong>
+
+                            <span>
+                                60 min • Due in 2 days
+                            </span>
+
+                        </div>
+
+                        <span class="priority medium">
+                            MEDIUM
+                        </span>
+
+                    </div>
+
+
+                    <div class="focus-task">
+
+                        <div class="number">
+                            3
+                        </div>
+
+                        <div class="task-info">
+
+                            <strong>
+                                Update Resume
+                            </strong>
+
+                            <span>
+                                30 min • Due in 3 days
+                            </span>
+
+                        </div>
+
+                        <span class="priority low">
+                            LOW
+                        </span>
+
+                    </div>
+
+
+                    <div class="focus-footer">
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            Recommended study time
+                        </span>
+
+                        <strong>
+                            3 hours
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROGRESS -->
+
+                <div class="card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                THIS WEEK
+                            </span>
+
+                            <h2>
+                                Weekly Progress
+                            </h2>
+
+                        </div>
+
+                        <strong class="percentage">
+                            17%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-circle">
+
+                        <div>
+
+                            <strong>
+                                17%
+                            </strong>
+
+                            <span>
+                                Completed
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-label">
+
+                        <span>
+                            Tasks completed
+                        </span>
+
+                        <strong>
+                            1 / 6
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div style="width:17%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- UPCOMING DEADLINES -->
+
+            <div class="card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            UPCOMING
+                        </span>
+
+                        <h2>
+                            Upcoming Deadlines
+                        </h2>
+
+                    </div>
+
+                    <a href="tasks.html"
+                       class="view-link">
+                        View all →
+                    </a>
+
+                </div>
+
+
+                <div class="deadline">
+
+                    <div class="date-box">
+                        <strong>10</strong>
+                        <span>AUG</span>
+                    </div>
+
+                    <div class="deadline-info">
+
+                        <strong>
+                            Complete DSA Assignment
+                        </strong>
+
+                        <span>
+                            90 minutes • High Priority
+                        </span>
+
+                    </div>
+
+                    <span class="priority high">
+                        HIGH
+                    </span>
+
+                </div>
+
+
+                <div class="deadline">
+
+                    <div class="date-box">
+                        <strong>11</strong>
+                        <span>AUG</span>
+                    </div>
+
+                    <div class="deadline-info">
+
+                        <strong>
+                            Prepare DBMS Notes
+                        </strong>
+
+                        <span>
+                            60 minutes • Medium Priority
+                        </span>
+
+                    </div>
+
+                    <span class="priority medium">
+                        MEDIUM
+                    </span>
+
+                </div>
+
+
+                <div class="deadline">
+
+                    <div class="date-box">
+                        <strong>12</strong>
+                        <span>AUG</span>
+                    </div>
+
+                    <div class="deadline-info">
+
+                        <strong>
+                            Update Resume
+                        </strong>
+
+                        <span>
+                            30 minutes • Low Priority
+                        </span>
+
+                    </div>
+
+                    <span class="priority low">
+                        LOW
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+

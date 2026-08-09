@@ -1,0 +1,568 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>StudentHub | My Tasks</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <span>
+                StudentHub
+            </span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html"
+               class="nav-item">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </a>
+
+
+            <a href="tasks.html"
+               class="nav-item active">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                My Tasks
+
+            </a>
+
+
+            <a href="career.html"
+               class="nav-item">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                Career Planner
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-tip">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            <div>
+
+                <strong>
+                    Study Tip
+                </strong>
+
+                <p>
+                    Break large assignments
+                    into smaller tasks.
+                </p>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+
+        <header class="topbar">
+
+            <div class="mobile-title">
+                StudentHub
+            </div>
+
+
+            <div class="profile">
+
+                <div class="notification">
+                    <i class="fa-regular fa-bell"></i>
+                    <span></span>
+                </div>
+
+                <div class="avatar">
+                    S
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>
+                        Sakshi
+                    </strong>
+
+                    <small>
+                        B.Tech CSE
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="content">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        PRODUCTIVITY
+                    </span>
+
+                    <h1>
+                        My Tasks
+                    </h1>
+
+                    <p>
+                        Manage your assignments,
+                        goals and deadlines.
+                    </p>
+
+                </div>
+
+                <button
+                    class="primary-btn"
+                    onclick="openTaskModal()">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Task
+
+                </button>
+
+            </div>
+
+
+            <!-- CONTROLS -->
+
+            <div class="task-controls">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass">
+                    </i>
+
+                    <input
+                        type="text"
+                        id="searchTask"
+                        placeholder="Search tasks..."
+                        onkeyup="searchTasks()">
+
+                </div>
+
+
+                <select id="taskFilter"
+                        onchange="filterTasks()">
+
+                    <option value="all">
+                        All Tasks
+                    </option>
+
+                    <option value="pending">
+                        Pending
+                    </option>
+
+                    <option value="completed">
+                        Completed
+                    </option>
+
+                    <option value="high">
+                        High Priority
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- TASK LIST -->
+
+            <div class="task-list"
+                 id="taskList">
+
+
+                <div class="task-row"
+                     data-status="pending"
+                     data-priority="high">
+
+                    <button
+                        class="check-button"
+                        onclick="completeTask(this)">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </button>
+
+
+                    <div class="task-content">
+
+                        <strong>
+                            Complete DSA Assignment
+                        </strong>
+
+                        <span>
+                            Due 10 August 2026
+                            • 90 minutes
+                        </span>
+
+                    </div>
+
+
+                    <span class="priority high">
+                        HIGH
+                    </span>
+
+
+                    <button
+                        class="delete-btn"
+                        onclick="deleteTask(this)">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="task-row"
+                     data-status="pending"
+                     data-priority="medium">
+
+                    <button
+                        class="check-button"
+                        onclick="completeTask(this)">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </button>
+
+
+                    <div class="task-content">
+
+                        <strong>
+                            Prepare DBMS Notes
+                        </strong>
+
+                        <span>
+                            Due 11 August 2026
+                            • 60 minutes
+                        </span>
+
+                    </div>
+
+
+                    <span class="priority medium">
+                        MEDIUM
+                    </span>
+
+
+                    <button
+                        class="delete-btn"
+                        onclick="deleteTask(this)">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="task-row"
+                     data-status="pending"
+                     data-priority="low">
+
+                    <button
+                        class="check-button"
+                        onclick="completeTask(this)">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </button>
+
+
+                    <div class="task-content">
+
+                        <strong>
+                            Update Resume
+                        </strong>
+
+                        <span>
+                            Due 12 August 2026
+                            • 30 minutes
+                        </span>
+
+                    </div>
+
+
+                    <span class="priority low">
+                        LOW
+                    </span>
+
+
+                    <button
+                        class="delete-btn"
+                        onclick="deleteTask(this)">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="task-row completed-row"
+                     data-status="completed"
+                     data-priority="high">
+
+                    <button
+                        class="check-button checked"
+                        onclick="completeTask(this)">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </button>
+
+
+                    <div class="task-content">
+
+                        <strong>
+                            Practice JavaScript
+                        </strong>
+
+                        <span>
+                            Completed • 90 minutes
+                        </span>
+
+                    </div>
+
+
+                    <span class="priority high">
+                        HIGH
+                    </span>
+
+
+                    <button
+                        class="delete-btn"
+                        onclick="deleteTask(this)">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="task-row"
+                     data-status="pending"
+                     data-priority="medium">
+
+                    <button
+                        class="check-button"
+                        onclick="completeTask(this)">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </button>
+
+
+                    <div class="task-content">
+
+                        <strong>
+                            Complete Aptitude Practice
+                        </strong>
+
+                        <span>
+                            Due 14 August 2026
+                            • 60 minutes
+                        </span>
+
+                    </div>
+
+
+                    <span class="priority medium">
+                        MEDIUM
+                    </span>
+
+
+                    <button
+                        class="delete-btn"
+                        onclick="deleteTask(this)">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="task-row"
+                     data-status="pending"
+                     data-priority="high">
+
+                    <button
+                        class="check-button"
+                        onclick="completeTask(this)">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </button>
+
+
+                    <div class="task-content">
+
+                        <strong>
+                            Build Portfolio Project
+                        </strong>
+
+                        <span>
+                            Due 16 August 2026
+                            • 120 minutes
+                        </span>
+
+                    </div>
+
+
+                    <span class="priority high">
+                        HIGH
+                    </span>
+
+
+                    <button
+                        class="delete-btn"
+                        onclick="deleteTask(this)">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ADD TASK MODAL -->
+
+<div class="modal"
+     id="taskModal">
+
+    <div class="modal-box">
+
+        <div class="modal-heading">
+
+            <h2>
+                Add New Task
+            </h2>
+
+            <button onclick="closeTaskModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <label>
+            Task Name
+        </label>
+
+        <input
+            type="text"
+            id="newTaskName"
+            placeholder="Enter task name">
+
+
+        <label>
+            Deadline
+        </label>
+
+        <input
+            type="date"
+            id="newTaskDate">
+
+
+        <label>
+            Priority
+        </label>
+
+        <select id="newTaskPriority">
+
+            <option value="high">
+                High
+            </option>
+
+            <option value="medium">
+                Medium
+            </option>
+
+            <option value="low">
+                Low
+            </option>
+
+        </select>
+
+
+        <button
+            class="primary-btn full"
+            onclick="addNewTask()">
+
+            Add Task
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
